@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Env file
+.env
+
+# PyCharm
+.idea/
+
+# Node
+frontend/node_modules/
