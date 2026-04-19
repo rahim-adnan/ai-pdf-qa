@@ -5,6 +5,8 @@ langchain
 langchain-openai
 langchain-community
 langchain-groq
+langchain-huggingface
 faiss-cpu
 openai
 python-dotenv
+sentence-transformers
