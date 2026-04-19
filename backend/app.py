@@ -8,7 +8,7 @@ from pdf_processor import PDFProcessor
 from qa_engine import QAEngine
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
+CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000", "https://your-app.vercel.app"])
 
 pdf_processor = PDFProcessor()
 qa_engine = QAEngine()
@@ -44,4 +44,5 @@ def ask_question_route():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
