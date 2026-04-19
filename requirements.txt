@@ -3,10 +3,8 @@ flask-cors
 pypdf
 langchain
 langchain-openai
-langchain-community
 langchain-groq
-langchain-huggingface
+langchain-community
 faiss-cpu
 openai
 python-dotenv
-sentence-transformers
