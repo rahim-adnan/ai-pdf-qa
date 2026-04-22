@@ -2,7 +2,7 @@
 import os
 from langchain_groq import ChatGroq
 from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
@@ -13,8 +13,9 @@ class QAEngine:
             model="llama-3.1-8b-instant",
             api_key=os.environ["GROQ_API_KEY"]
         )
-        self.embeddings = OpenAIEmbeddings(
-            api_key=os.environ["OPENAI_API_KEY"]
+        self.embeddings = HuggingFaceEndpointEmbeddings(
+            model="sentence-transformers/all-MiniLM-L6-v2",
+            huggingfacehub_api_token=os.environ["HF_API_KEY"]
         )
         self.chain = None
 

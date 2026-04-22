@@ -8,7 +8,7 @@ from pdf_processor import PDFProcessor
 from qa_engine import QAEngine
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000", "https://your-app.vercel.app"])
+CORS(app)
 
 pdf_processor = PDFProcessor()
 qa_engine = QAEngine()
