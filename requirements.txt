@@ -2,9 +2,9 @@ flask
 flask-cors
 pypdf
 langchain
-langchain-openai
 langchain-groq
 langchain-community
+langchain-huggingface
+langchain-text-splitters
 faiss-cpu
-openai
 python-dotenv
