@@ -6,9 +6,12 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pdf_processor import PDFProcessor
 from qa_engine import QAEngine
-
 app = Flask(__name__)
 CORS(app)
+
+@app.route("/health")
+def health():
+    return jsonify({"status": "ok"})
 
 pdf_processor = PDFProcessor()
 qa_engine = QAEngine()
