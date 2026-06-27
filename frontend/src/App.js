@@ -10,7 +10,6 @@ function WakeupScreen({ onReady }) {
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    // Slowly fill progress bar
     const ticker = setInterval(() => {
       setProgress(p => Math.min(p + 1, 90));
     }, 600);
@@ -57,8 +56,6 @@ function WakeupScreen({ onReady }) {
         <p style={{ ...styles.status, color: failed ? "#e05555" : progress === 100 ? "#16a34a" : "#888" }}>
           {status}
         </p>
-        <a
-
       </div>
     </div>
   );
@@ -82,7 +79,6 @@ const styles = {
   barBg: { background: "#e2e8f0", borderRadius: "10px", height: "10px", overflow: "hidden", marginBottom: "16px" },
   bar: { height: "100%", borderRadius: "10px", transition: "width 0.5s ease" },
   status: { fontSize: "0.9rem", marginBottom: "20px" },
-
 };
 // ── End Wakeup Screen ────────────────────────────────────────
 
