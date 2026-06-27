@@ -58,13 +58,7 @@ function WakeupScreen({ onReady }) {
           {status}
         </p>
         <a
-          href="YOUR_YOUTUBE_LINK_HERE"
-          target="_blank"
-          rel="noreferrer"
-          style={styles.ytBtn}
-        >
-          ▶ Watch demo video while you wait
-        </a>
+
       </div>
     </div>
   );
@@ -88,12 +82,7 @@ const styles = {
   barBg: { background: "#e2e8f0", borderRadius: "10px", height: "10px", overflow: "hidden", marginBottom: "16px" },
   bar: { height: "100%", borderRadius: "10px", transition: "width 0.5s ease" },
   status: { fontSize: "0.9rem", marginBottom: "20px" },
-  ytBtn: {
-    display: "inline-block", padding: "10px 22px",
-    background: "#fff0f0", border: "1px solid #fca5a5",
-    color: "#dc2626", borderRadius: "10px",
-    textDecoration: "none", fontSize: "0.95rem", fontWeight: 600,
-  },
+
 };
 // ── End Wakeup Screen ────────────────────────────────────────
 
